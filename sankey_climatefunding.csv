@@ -1,0 +1,43 @@
+source,target,value
+HUD,Neighborhood Stabilization Program,380389300
+HUD,SANDY,15153857
+FEMA,Hazard Mitigation,214868058.4
+FEMA,Emergency Management,83864442.45
+FEMA,Public Assistance,458819278.8
+FEMA,Flood Insurance,556259033.1
+Neighborhood Stabilization Program,Connecticut,38284096
+Neighborhood Stabilization Program,Maine,24600000
+Neighborhood Stabilization Program,Massachusetts,234821631
+Neighborhood Stabilization Program,New Hampshire,25058452
+Neighborhood Stabilization Program,Rhode Island,28113526
+Neighborhood Stabilization Program,Vermont,29511595
+HUD,Rhode Island,9183376
+HUD,Vermont,13571476
+SANDY,Connecticut,1575645
+SANDY,Massachusetts,12356000
+SANDY,Rhode Island,625612
+SANDY,Vermont,596600
+Hazard Mitigation,Connecticut,55737385.83
+Hazard Mitigation,Maine,4071756.277
+Hazard Mitigation,Massachusetts,78102206.43
+Hazard Mitigation,New Hampshire,25056519.47
+Hazard Mitigation,Rhode Island,11359558.88
+Hazard Mitigation,Vermont,40540631.48
+Emergency Management,Connecticut,16356857.28
+Emergency Management,Maine,11593991.56
+Emergency Management,Massachusetts,22942702.28
+Emergency Management,New Hampshire,11600149.76
+Emergency Management,Rhode Island,11214133.41
+Emergency Management,Vermont,10156608.16
+Public Assistance,Connecticut,102422971.3
+Public Assistance,Maine,18912594.42
+Public Assistance,Massachusetts,246914328.2
+Public Assistance,New Hampshire,30762399.07
+Public Assistance,Rhode Island,27729902.34
+Public Assistance,Vermont,32077083.44
+Flood Insurance,Connecticut,380765665.6
+Flood Insurance,Maine,5328656.238
+Flood Insurance,Massachusetts,69750840.52
+Flood Insurance,New Hampshire,5448518.84
+Flood Insurance,Rhode Island,54146665.73
+Flood Insurance,Vermont,40818686.13

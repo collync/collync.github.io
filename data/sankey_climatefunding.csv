@@ -1,0 +1,44 @@
+source,target,value
+HUD,NSP,380389300
+HUD,DF,22754852
+HUD,SANDY,15153857
+FEMA,Hazard Mitigation,214868058.4
+FEMA,Emergency Management,83864442.45
+FEMA,Public Assistance,458819278.8
+FEMA,Flood Insurance,556259033.1
+NSP,CT,38284096
+NSP,ME,24600000
+NSP,MA,234821631
+NSP,NH,25058452
+NSP,RI,28113526
+NSP,VT,29511595
+DF,RI,9183376
+DF,VT,13571476
+SANDY,CT,1575645
+SANDY,MA,12356000
+SANDY,RI,625612
+SANDY,VT,596600
+Hazard Mitigation,CT,55737385.83
+Hazard Mitigation,ME,4071756.277
+Hazard Mitigation,MA,78102206.43
+Hazard Mitigation,NH,25056519.47
+Hazard Mitigation,RI,11359558.88
+Hazard Mitigation,VT,40540631.48
+Emergency Management,CT,16356857.28
+Emergency Management,ME,11593991.56
+Emergency Management,MA,22942702.28
+Emergency Management,NH,11600149.76
+Emergency Management,RI,11214133.41
+Emergency Management,VT,10156608.16
+Public Assistance,CT,102422971.3
+Public Assistance,ME,18912594.42
+Public Assistance,MA,246914328.2
+Public Assistance,NH,30762399.07
+Public Assistance,RI,27729902.34
+Public Assistance,VT,32077083.44
+Flood Insurance,CT,380765665.6
+Flood Insurance,ME,5328656.238
+Flood Insurance,MA,69750840.52
+Flood Insurance,NH,5448518.84
+Flood Insurance,RI,54146665.73
+Flood Insurance,VT,40818686.13
