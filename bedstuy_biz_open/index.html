@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Open BedStuy Businesses</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  </head>
+  <style>
+    body {
+      background: #404040;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    #map {
+      border-left: 1px solid #fff;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+    }
+
+
+    .mapboxgl-popup {
+      padding-bottom: 5px;
+    }
+
+    .mapboxgl-popup-close-button {
+      display: none;
+    }
+
+    .mapboxgl-popup-content {
+      font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+      padding: 0;
+      width: 400px;
+    }
+
+    .mapboxgl-popup-content-wrapper {
+      padding: 1%;
+    }
+
+    .mapboxgl-popup-content h3 {
+      background: rgb(61, 59, 59);
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      display: block;
+      padding: 15px;
+      font-weight: 700;
+      margin-top: -5px;
+    }
+
+    .mapboxgl-popup-content h4 {
+      margin: 0;
+      display: block;
+      padding: 10px 3px 10px 10px;
+      font-weight: 400;
+    }
+
+    .mapboxgl-container {
+      cursor: pointer;
+    }
+
+    .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+      margin-top: 3px;
+    }
+
+    .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+      border-bottom-color: rgb(61, 59, 59);
+    }
+
+    /* .filter-group {
+      font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      border-radius: 3px;
+      width: 120px;
+      color: #fff;
+    } */
+
+    /* .filter-group input[type='checkbox']:first-child + label {
+      border-radius: 3px 3px 0 0;
+    }
+
+    .filter-group label:last-child {
+      border-radius: 0 0 3px 3px;
+      border: none;
+    }
+
+    .filter-group input[type='checkbox'] {
+      display: none;
+    }
+
+    .filter-group input[type='checkbox'] + label {
+      background-color: #3386c0;
+      display: block;
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .filter-group input[type='checkbox'] + label {
+      background-color: #3386c0;
+      text-transform: capitalize;
+    }
+
+    .filter-group input[type='checkbox'] + label:hover,
+    .filter-group input[type='checkbox']:checked + label {
+      background-color: #4ea0da;
+    }
+
+    .filter-group input[type='checkbox']:checked + label:before {
+      content: '✔';
+      margin-right: 5px;
+    } */
+  </style>
+
+  <body>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Nav bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <!-- <li class="sidebar-brand">
+                </li> -->
+
+                <li>
+                    <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR9qkszDc2pP7-gT4rd-jMK0BhfIjaxNbHbVwr04u7ZZGtSWs96OfAe4NCaaWkvnGYUZKBogU5tbc7G/pubhtml" target="_blank">
+                        <span style="padding-left:0.3em">Go to latest spreadsheet</span></a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                        <span style="padding-left:0.5em">Submit new/updates to businesses</span></a>
+                </li>
+
+            </ul>
+        </nav>
+
+<!--section -->
+
+
+    <div id="map"></div>
+    <nav id="filter-group" class="filter-group"></nav>
+
+    <script>
+      var transformRequest = (url, resourceType) => {
+        var isMapboxRequest =
+          url.slice(8, 22) === "api.mapbox.com" ||
+          url.slice(10, 26) === "tiles.mapbox.com";
+        return {
+          url: isMapboxRequest
+            ? url.replace("?", "?pluginName=sheetMapper&")
+            : url
+        };
+      };
+
+      //YOUR TURN: add your Mapbox access token
+      mapboxgl.accessToken = 'pk.eyJ1IjoiY29sbHluYyIsImEiOiJjajhvNWwyanMxZzMyMnZqc3M1NnBpbm9jIn0.Jkoo-N4rcVd8psYF5J0rVQ';
+      var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: "mapbox://styles/collync/ck965m4ok0ret1inzhgfyaemg", //YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+        center: [-73.93922, 40.68716], // starting position [lng, lat]
+        zoom: 12, // starting zoom
+        transformRequest: transformRequest
+      });
+
+
+      map.on("load", function() {
+        init();
+      });
+
+      // Initialize Tabletop to access your table
+      function init() {
+        Tabletop.init({
+          // YOUR TURN: change 'key' value to point to your spreadsheet
+          key: 'https://docs.google.com/spreadsheets/d/1BvSgQGmEjOyoMCf-fn2NNXQYSjWTtiyXAIXBeiRlZbY/edit?usp=sharing',
+          // once Tabletop has loaded the data, it passes it to the 'callback' function, 'addPoints', defined below
+          callback: addPoints,
+          simpleSheet: true
+        });
+      }
+
+
+      // create a function called addPoints that iterates through your table (row by row) to create markers and popups
+      function addPoints(data) {
+
+        // iterate through your table to set the marker to lat/long values for each row
+
+        data.forEach(function(row) {
+
+          // create a variable for your popup and populate your popup with information from your table
+          var popup = new mapboxgl.Popup()
+            .setHTML(`<h3>` + row.Business + `</h3>` + '<h4>' + '<b>' + 'Category: ' + '</b>' + row.Type + '</h4>'+ '<h4>' + '<b>' + 'Address: ' + '</b>' + row.Address + '</h4>' + '<h4>' + '<b>' + 'Phone: ' + '</b>' + row.Phone + '</h4>' + '<h4>' + '<b>' + 'Hours: ' + '</b>' + row.Hours + '</h4>' + '<h4>' + '<b>' + 'Latest: ' + '</b>' + row.Website + '</h4>'+ '<h4>' + '<b>' + 'Notes: ' + '</b>' + row.Notes + '</h4>'); // use the table to populate your popup with text
+
+
+          // create a variable for your markup and add it to the map
+          var marker = new mapboxgl.Marker({
+              color: 'green'
+            })
+            .setLngLat([row.Longitude, row.Latitude])
+            .setPopup(popup)
+            .addTo(map); // add the marker to the map
+
+
+        });
+      }
+
+// // filter stuff
+//
+//           var filterGroup = document.getElementById('filter-group');
+//         });
+//
+//         data.features.forEach(function(row)) {
+//             var symbol = feature.properties['marker'];
+//             var layerID = 'poi-' + symbol;
+// // Add a layer for this symbol type if it hasn't been added already.
+//           if (!map.getLayer(layerID)) {
+//             map.addLayer({
+//               'id': layerID,
+//               'type': 'symbol',
+//               'source': 'data',
+//               'layout': {
+//                 'icon-image': symbol + '-15',
+//                 'icon-allow-overlap': true
+//               },
+//               'filter': ['==', 'icon', symbol]
+//             });
+//
+// // Add checkbox and label elements for the layer.
+//           var input = document.createElement('input');
+//           input.type = 'checkbox';
+//           input.id = layerID;
+//           input.checked = true;
+//           filterGroup.appendChild(input);
+//
+//           var label = document.createElement('label');
+//           label.setAttribute('for', layerID);
+//           label.textContent = symbol;
+//           filterGroup.appendChild(label);
+//
+//           // When the checkbox changes, update the visibility of the layer.
+//           input.addEventListener('change', function(e) {
+//           map.setLayoutProperty(
+//           layerID,
+//           'visibility',
+//           e.target.checked ? 'visible' : 'none'
+//         );
+//       });
+//     }
+//   });
+// });
+
+
+    </script>
+        <!--<script src="vendor/jquery/jquery.js"></script>-->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Side Nav bar -->
+    <script src="js/sidenav_share.js"></script>
+
+
+
+  </body>
+
+</html>
