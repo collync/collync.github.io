@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
 
 body {
   overflow-x: hidden;
@@ -46,22 +46,46 @@ body {
     height: 100vh;
 }
 
+/*--- Home Page --*/
 
+.home {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/bg_allroles.jpg);
+}
 
-/*--- Landing Page --*/
+.content-section {
+  padding-top: 10vh;
+}
 
-.home-inner {
-  background-image: url(img/computers.png);
+.second-content-section {
+  padding-top: 30vh;
+}
+
+.chapter-section {
+  display: table;
+  width: 100%;
+  height: 50vh;
+  padding: 10vh 0 0 0;
+  color: white;
+}
+
+.chapter-nav {
+  padding: 5vh 0 5vh 0;
+  z-index: 1;
 }
 
 .caption {
   width: 100%;
   max-width: 100%;
-  position: absolute;
-  top: 38%;
+  top: 25%;
   z-index: 1;
   color: white;
-  text-transform: uppercase;
+  padding-left: 20%;
+  padding-right: 20%;
+  position: absolute;
 }
 
 .caption h1 {
@@ -79,11 +103,107 @@ body {
 }
 
 .btn-lg {
-  border-width: medium;
-  border-radius: 0;
+  border-width: large;
+  border-radius: .5rem;
   padding: .6rem 1.3rem;
   font-size: 1.1rem;
 }
+
+h3.heading {
+  margin-top: 4rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: .3rem;
+  /* text-shadow: .1rem .1rem .8rem black; */
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  top:1rem;
+  margin-bottom: 2rem;
+  -webkit-text-stroke: .001rem black;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/*============= AUTHOR SECTION =============*/
+
+.author {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/44-njalsditch-6sRGB.jpg);
+}
+
+/*============= PHOTOGRAPHER SECTION =============*/
+
+.photographer{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/bg_end_dark.jpg);
+}
+
+/*============= LANDSCAPE ARCHITECT SECTION =============*/
+
+.landscape-architect{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/bg_landscapearchitect4.jpg);
+}
+
+/*============= TEACHER SECTION =============*/
+
+.teacher{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/bg_teacher_sm.jpg);
+}
+
+
+
+/*============= LANDSCAPE SECTION =============*/
+
+.landscape{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/bg_landscape.jpg);
+}
+
+
+
+/*============= DESIGN SECTION =============*/
+
+.design{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/bg_design_invert.jpg);
+}
+
+
+/*============= ALL MY WORK SECTION =============*/
+
+.end{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(img/bg_img/AngleRepose.jpg);
+}
+
 
 /*============= COURSE SECTION =============*/
 .narrow {
@@ -121,12 +241,7 @@ body {
   border-radius: 0;
 }
 
-h3.heading {
-  font-size: 1.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1.9rem;
-}
+
 
 .heading-underline {
   width: 3rem;
@@ -151,15 +266,15 @@ h3.heading {
 
 /*--- Resources Section --*/
 
-.fixed {
+/* .fixed {
   background-image: url(img/bg_img/44-njalsditch-6sRGB.jpg);
   z-index: -1;
-}
+} */
 
 .dark {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 7rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .fixed-background h3 {
@@ -231,10 +346,15 @@ hr.socket {
     padding-bottom: 1.2rem;
   }
 
-  .btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1rem;
+  .caption h4 {
+      font-size: 1rem;
+      padding-bottom: 1rem;
   }
+
+  /* .btn-lg {
+    padding: 2,5vh 0 2.5vh 0;
+    font-size: 1rem;
+  } */
 
   .narrow h1 {
     font-size: 1.5rem;
