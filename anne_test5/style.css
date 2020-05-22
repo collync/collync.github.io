@@ -40,6 +40,11 @@ body {
   color: #c0c0c0;
 }
 
+.nav-share {
+  float: right;
+  margin-right: 1em;
+}
+
 /*--- Slider --*/
 
 .carousel-item {
@@ -110,11 +115,11 @@ body {
 }
 
 h3.heading {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   letter-spacing: .3rem;
   /* text-shadow: .1rem .1rem .8rem black; */
 }
@@ -122,11 +127,18 @@ h3.heading {
 h4 {
   font-size: 1.4rem;
   font-weight: 600;
-  top:1rem;
-  margin-bottom: 2rem;
+  /* top:1rem;
+  margin-bottom: 2rem; */
   -webkit-text-stroke: .001rem black;
-  padding-left: 20%;
-  padding-right: 20%;
+  /* max-width: 50% */
+  /* padding-left: 20%;
+  padding-right: 20%; */
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  top: 1rem;
 }
 
 /*============= AUTHOR SECTION =============*/
@@ -257,7 +269,7 @@ h4 {
 .feature h3 {
   font-size: 1.3rem;
   text-transform: uppercase;
-  padding-bottom: .4rem;
+  /* padding-bottom: .4rem; */
 }
 
 .feature p {

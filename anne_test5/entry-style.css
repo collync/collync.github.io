@@ -18,13 +18,13 @@ body {
 .navbar {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 1.2rem;
   letter-spacing: .1rem;
   background: rgba(0, 0, 0, 0.6)!important;
 }
 
-.navbar-brand img {
-  height: 2rem;
+.navbar-brand {
+  height: 3rem;
 }
 
 .navbar-nav li {
@@ -41,6 +41,7 @@ body {
 }
 
 
+
 /*--- Landing Page --*/
 
 .home-inner {
@@ -51,11 +52,11 @@ body {
   width: 100%;
   max-width: 100%;
   position: absolute;
-  top: 60%;
+  top: 70%;
   z-index: 1;
   color: white;
   text-transform: uppercase;
-  padding-left: 15%
+  padding-left: 10%
 }
 
 .caption h1 {
