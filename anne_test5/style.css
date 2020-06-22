@@ -28,7 +28,7 @@ body {
 }
 
 .navbar-nav li {
-  padding-right: .7rem;
+  padding-right: 2rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -114,6 +114,16 @@ body {
   font-size: 1.1rem;
 }
 
+h3.cs {
+  margin-top: 2rem;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* margin-bottom: 1rem; */
+  letter-spacing: .3rem;
+  /* text-shadow: .1rem .1rem .8rem black; */
+}
+
 h3.heading {
   margin-top: 2rem;
   font-size: 2.5rem;
@@ -136,7 +146,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   top: 1rem;
 }
@@ -206,7 +216,7 @@ h5 {
 }
 
 
-/*============= ALL MY WORK SECTION =============*/
+/*============= END SECTION =============*/
 
 .end{
   width: 100%;
@@ -216,6 +226,23 @@ h5 {
   background-image: url(img/bg_img/AngleRepose.jpg);
 }
 
+
+/*============= SPLIT PAGE SECTION =============*/
+
+.leftside, .rightside{
+  min-height: 100%;
+  width:100%;
+  background-size: cover;
+  position: relative;
+}
+
+.leftside {
+  background:#FEFFFA;
+}
+
+.rightside {
+  background:#FAF7E6;
+}
 
 /*============= COURSE SECTION =============*/
 .narrow {
@@ -252,8 +279,6 @@ h5 {
   padding: 2rem 0 3.5rem;
   border-radius: 0;
 }
-
-
 
 .heading-underline {
   width: 3rem;
@@ -312,6 +337,54 @@ blockquote .svg-inline--fa {
 .clients-hr {
   border-top: .05rem solid #0F5D51;
 }
+
+/*--- Social Media Sticky --*/
+
+.icon-bar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0;
+    z-index: 100;
+}
+
+/* .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background: #000;
+} */
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.google {
+    background: #dd4b39;
+    color: white;
+}
+
+.linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.youtube {
+    background: #bb0000;
+    color: white;
+}
+
 
 /*--- Contact Section --*/
 
@@ -377,6 +450,80 @@ hr.socket {
     display: block;
     margin: 0 auto;
   }
+}
+
+/* Books Page */
+
+/* .books {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-color:#FEFFFA;
+  background-image: url(img/bg_img/bg_allroles.jpg);
+} */
+
+
+/* Gallery Page */
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 50%;
+}
+
+
+/* .row,
+.row > .column {
+  padding: 8px;
+} */
+
+.card img {
+}
+
+.grid-item {
+  width: 25%;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.flower {
+  background: teal;
+  }
+
+.bird {
+  background: salmon;
+  }
+
+.fruit {
+  background: tomato;
+  }
+
+.cs-section {
+  display: cover;
+  width: 100%;
+  height: 50vh;
+  padding-top: 30vh;
+  color: white;
+}
+
+.bio-section {
+  padding-top: 20vh;
+}
+
+.bio-section-l {
+  padding-top: 25vh;
+  /* align-items: center; */
+  padding-left: 20%;
+  padding-right: 20%;
+
 }
 
 /*============ BOOTSTRAP BREAK POINTS:
