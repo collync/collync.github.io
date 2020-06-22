@@ -229,18 +229,18 @@ h5 {
 
 /*============= SPLIT PAGE SECTION =============*/
 
-.leftside, .rightside{
+#bootstrap-overrides .leftside, .rightside{
   min-height: 100%;
   width:100%;
   background-size: cover;
   position: relative;
 }
 
-.leftside {
+#bootstrap-overrides .leftside {
   background:#FEFFFA;
 }
 
-.rightside {
+#bootstrap-overrides .rightside {
   background:#FAF7E6;
 }
 
@@ -506,7 +506,7 @@ hr.socket {
   background: tomato;
   }
 
-.cs-section {
+#bootstrap-overrides .cs-section {
   display: cover;
   width: 100%;
   height: 50vh;
@@ -518,7 +518,7 @@ hr.socket {
   padding-top: 20vh;
 }
 
-.bio-section-l {
+#bootstrap-overrides .bio-section-l {
   padding-top: 25vh;
   /* align-items: center; */
   padding-left: 20%;
