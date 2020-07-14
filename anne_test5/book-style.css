@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Crimson Text', serif;
+  color: #505962
+}
+
+.offset:before {
+  display: block;
+  content: "";
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+/*--- Navigation --*/
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, 0.6)!important;
+}
+
+.navbar-brand img {
+  height: 2rem;
+}
+
+.navbar-nav li {
+  padding-right: 2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #c0c0c0;
+}
+
+.nav-share {
+  float: right;
+  margin-right: 1em;
+}
+
+
+
+/*--- Landing Page --*/
+
+.home-inner {
+  background-image: url(img/aws-www-entrynobuttons.png);
+}
+
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 70%;
+  z-index: 1;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 10%
+}
+
+.caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+  padding-bottom: .8rem;
+}
+
+.caption h3 {
+  font-size: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1.6rem;
+}
+
+.h4 {
+  padding-top: 2.6rem!important;
+}
+
+.btn-lg {
+  border-width: medium;
+  border-radius: .5rem;
+  padding: .6rem 1.3rem;
+  font-size: 1.8rem;
+}
+
+
+/* responsively apply fixed position */
+@media (min-width: 576px){
+    #left {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+
+    #right {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+    }
+}
+
+ul.storebuttons {
+    padding: 0;
+    list-style-type: none;
+    /* margin: 10px 0; */
+}
+
+ul.storebuttons li {
+	margin:0 0 0 13px;
+	height: 31px;
+	padding:0;
+	list-style-type: none;
+	float: left;
+}
+
+ul.storebuttons li a {
+    display: block;
+    width: 103px;
+    height: 31px;
+    background-image: url(img/sprite_bookstore_buttons.png) no-repeat;
+r */
+}
+
+ul.storebuttons li.amazon a { background-position: 0 0;}
+ul.storebuttons li.indie a { background-position: -309px 0;}
+ul.storebuttons li.powells a { background-position: -412px 0;}
+
+.book {
+  padding-top: 20vh;
+}
+
+.link {
+  color: black;
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
