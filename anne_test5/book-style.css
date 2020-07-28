@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+
 
 body {
   overflow-x: hidden;
@@ -78,9 +79,46 @@ body {
   padding-bottom: 1.6rem;
 }
 
-.h4 {
-  padding-top: 2.6rem!important;
+h4 {
+  padding-top: 2.3rem!important;
+  font-size: 2rem;
+  font-weight: 700;
 }
+
+p {
+  font-size: 1.2rem;
+  padding-top: .5rem;
+}
+
+i {
+  font-size: 1rem;
+  padding-left: 5px;
+}
+
+/* .blockquote {
+  font-family: 'Open Sans', sans-serif;
+} */
+
+blockquote {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	line-height: 1.4;
+	text-rendering: optimizeLegibility;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-fon-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  padding-top: 2.3rem;
+}
+
+
+blockquote footer {
+  font-style: italic;
+  padding-left: 10px;
+}
+
 
 .btn-lg {
   border-width: medium;
@@ -89,6 +127,25 @@ body {
   font-size: 1.8rem;
 }
 
+
+.btn-primary {
+    background: #1c8940;
+    color: #ffffff;
+    border-color: #1c8940;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #009966;
+    border-color: #1c8940;
+}
+
+.chapter-section {
+  display: table;
+  width: 100%;
+  height: 50vh;
+  padding: 10vh 0 0 0;
+  color: white;
+}
 
 /* responsively apply fixed position */
 @media (min-width: 576px){
@@ -106,31 +163,6 @@ body {
     }
 }
 
-ul.storebuttons {
-    padding: 0;
-    list-style-type: none;
-    /* margin: 10px 0; */
-}
-
-ul.storebuttons li {
-	margin:0 0 0 13px;
-	height: 31px;
-	padding:0;
-	list-style-type: none;
-	float: left;
-}
-
-ul.storebuttons li a {
-    display: block;
-    width: 103px;
-    height: 31px;
-    background-image: url(img/sprite_bookstore_buttons.png) no-repeat;
-r */
-}
-
-ul.storebuttons li.amazon a { background-position: 0 0;}
-ul.storebuttons li.indie a { background-position: -309px 0;}
-ul.storebuttons li.powells a { background-position: -412px 0;}
 
 .book {
   padding-top: 20vh;
@@ -138,6 +170,11 @@ ul.storebuttons li.powells a { background-position: -412px 0;}
 
 .link {
   color: black;
+}
+
+.left-img {
+  padding-top: 2.3rem!important;
+  max-height: 70vh;
 }
 
 /*============ BOOTSTRAP BREAK POINTS:
