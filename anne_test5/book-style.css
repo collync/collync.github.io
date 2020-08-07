@@ -85,6 +85,11 @@ h4 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
 p {
   font-size: 1.2rem;
   padding-top: .5rem;
@@ -113,6 +118,10 @@ blockquote {
   padding-top: 1.5rem;
 }
 
+blockquote p {
+    font-size: 1rem !important;
+}
+
 
 blockquote footer {
   font-style: italic;
@@ -132,6 +141,7 @@ blockquote footer {
     background: #1c8940;
     color: #ffffff;
     border-color: #1c8940;
+    margin:5px 2px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
@@ -174,7 +184,13 @@ blockquote footer {
 
 .left-img {
   padding-top: 2.3rem!important;
+  max-height: 60vh;
+}
+
+.left-double-img {
+  padding-top: 2.3rem!important;
   max-height: 30vh;
+  margin: 10px;
 }
 
 /*============ BOOTSTRAP BREAK POINTS:

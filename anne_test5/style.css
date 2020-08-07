@@ -137,8 +137,8 @@ h3.heading {
 h4 {
   font-size: 1.4rem;
   font-weight: 600;
-  /* top:1rem;
-  margin-bottom: 2rem; */
+  /* top:1rem; */
+  margin-bottom: 2rem;
   -webkit-text-stroke: .001rem black;
   /* max-width: 50% */
   /* padding-left: 20%;
@@ -293,16 +293,17 @@ h5 {
   border-color: #189582;
 }
 
-.btn-book{
-  font-family: 'Crimson Text', serif;
-  background: #1c8940;
-  border-color: #1c8940;
-  color: white;
+.btn-primary {
+    background: #1c8940;
+    color: white!important;
+    border-color: #1c8940;
+    margin:5px 2px;
 }
 
-.btn-book:hover{
-  background: #009966;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #009966;
 }
+
 
 .btn-secondary:hover {
   background: #009966;
@@ -572,6 +573,11 @@ a:hover { color: #009966; }
     opacity:0.3;
 }
 
+a.custom-card, a.custom-card:hover {
+  color: black;
+}
+
+
 .middle {
   transition: .5s ease;
   opacity: 0;
@@ -654,12 +660,6 @@ a:hover { color: #009966; }
 
 }
 
-.square {
-    width: 100%;
-    padding-bottom: 100%;
-    background-size: cover;
-    background-position: center;
-}
 
 /*============ BOOTSTRAP BREAK POINTS:
 
